@@ -1,0 +1,193 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="mikrotik_switcher.MainPage">
+
+    <ScrollView>
+        <StackLayout Margin="15,33,15,15">
+            <Label TextColor="Blue"
+                   HorizontalTextAlignment="Center"
+                   FontSize="Large"
+                   Margin="0, 5, 0, 5">
+                CONNECTION SETTINGS
+            </Label>
+            <StackLayout
+                Orientation="Horizontal"
+                HorizontalOptions="Center"
+                >
+                <Label TextColor="Gray"
+                       VerticalTextAlignment="Center"
+                       HorizontalTextAlignment="Start"
+                       WidthRequest="130"
+                       FontSize="Small">
+                    IP adress:
+                </Label>
+
+                <Entry
+                    Keyboard="Numeric"
+                    MaxLength="3"
+                    WidthRequest="59"
+                    TextChanged="EntryIP1"
+                    x:Name="IP_adress_1"
+                    IsEnabled="True"/>
+
+                <Entry
+                    Keyboard="Numeric"
+                    MaxLength="3"
+                    WidthRequest="59"
+                    TextChanged="EntryIP2"
+                    x:Name="IP_adress_2"
+                    IsEnabled="True"/>
+
+                <Entry
+                    Keyboard="Numeric"
+                    MaxLength="3"
+                    WidthRequest="59"
+                    TextChanged="EntryIP3"
+                    x:Name="IP_adress_3"
+                    IsEnabled="True"/>
+
+                <Entry
+                    Keyboard="Numeric"
+                    MaxLength="3"
+                    WidthRequest="59"
+                    TextChanged="EntryIP4"
+                    x:Name="IP_adress_4"
+                    IsEnabled="True"/>
+            </StackLayout>
+
+            <StackLayout
+                Orientation="Horizontal"
+                HorizontalOptions="Center"
+                >
+                <Label TextColor="Gray"
+                       VerticalTextAlignment="Center"
+                       HorizontalTextAlignment="Start"
+                       FontSize="Small"
+                       WidthRequest="130">
+                    Enter login :
+                </Label>
+                <Entry
+                    x:Name="Login"
+                    WidthRequest="255"
+                    IsEnabled="True"
+                    >
+                    <Entry.Keyboard>
+                        <Keyboard x:FactoryMethod="Create">
+                            <x:Arguments>
+                                <KeyboardFlags>
+                                    None
+                                </KeyboardFlags>
+                            </x:Arguments>
+                        </Keyboard>
+                    </Entry.Keyboard>
+                </Entry>
+            </StackLayout>
+
+            <StackLayout
+                Orientation="Horizontal"
+                HorizontalOptions="Center">
+                <Label TextColor="Gray"
+                       VerticalTextAlignment="Center"
+                       HorizontalTextAlignment="Start"
+                       FontSize="Small"
+                       WidthRequest="130">
+                    Enter password :
+                </Label>
+
+                <Entry
+                    IsPassword="true"
+                    x:Name="Password"
+                    WidthRequest="255"
+                    IsEnabled="True"
+                    >
+                    <Entry.Keyboard>
+                        <Keyboard x:FactoryMethod="Create">
+                            <x:Arguments>
+                                <KeyboardFlags>
+                                    None
+                                </KeyboardFlags>
+                            </x:Arguments>
+                        </Keyboard>
+                    </Entry.Keyboard>
+                </Entry>
+            </StackLayout>
+            <StackLayout
+                Orientation="Horizontal"
+                Margin="15"
+                HorizontalOptions="Center">
+                <Button                    
+                    BorderWidth=".8"
+                    BorderColor="Blue"
+                    Text="CLEAR"
+                    TextColor="Blue"
+                    Clicked="ButtonClickedClear"
+                    CornerRadius="7"
+                    BackgroundColor="White"
+                    Padding="5"                    
+                    x:Name="buttonClear"
+                    WidthRequest="85"/>
+                <Button                    
+                    BorderWidth=".8"
+                    BorderColor="Blue"
+                    Text="CONNECT"
+                    TextColor="Blue"
+                    Clicked="ButtonClickedConnect"
+                    CornerRadius="7"
+                    BackgroundColor="White"
+                    Padding="5"
+                    x:Name="buttonConnect"
+                    WidthRequest="85"/>
+            </StackLayout>
+            <Label
+                Grid.Column="2"
+                Grid.Row="4"
+                TextColor="Blue"
+                Text="OK"
+                FontSize="Medium"
+                HorizontalTextAlignment="Center"
+                x:Name="ConnectionStatus"/>
+            <StackLayout
+                Orientation="Horizontal"
+                Margin="15"
+                HorizontalOptions="Center">
+                <Button                    
+                    BorderWidth=".8"
+                    BorderColor="Blue"
+                    Text="ON"
+                    TextColor="Blue"
+                    Clicked="clickedOn"
+                    CornerRadius="7"
+                    BackgroundColor="White"
+                    Padding="5"
+                    WidthRequest="78"
+                    x:Name="buttonOn"/>
+                <Button                    
+                    BorderWidth=".8"
+                    BorderColor="Blue"
+                    Text="OFF"
+                    TextColor="Blue"
+                    Clicked="clickedOff"
+                    CornerRadius="7"
+                    BackgroundColor="White"
+                    Padding="5"
+                    WidthRequest="78"
+                    x:Name="buttonOff"/>
+            </StackLayout>
+            <StackLayout Orientation="Horizontal"
+                         HorizontalOptions="Center">
+                <Button
+                    BorderWidth=".8"
+                    BorderColor="Blue"
+                    Text="OPTIONS"
+                    TextColor="Blue"
+                    Clicked="ToOptionsPageClick"
+                    CornerRadius="7"
+                    BackgroundColor="White"
+                    Padding="5"
+                    WidthRequest="78"
+                    x:Name="ToOptionsPage"/>
+            </StackLayout>
+        </StackLayout>
+    </ScrollView>
+</ContentPage>

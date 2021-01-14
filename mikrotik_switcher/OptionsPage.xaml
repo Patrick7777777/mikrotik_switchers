@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="mikrotik_switcher.OptionsPage">
+    <ScrollView>
+        <StackLayout Margin="15,33,15,15">
+            <Label TextColor="Blue"
+                   HorizontalTextAlignment="Center"
+                   FontSize="Large"
+                   Margin="0, 5, 0, 5">
+                PORTS SETTINGS
+            </Label>
+            <Editor
+                BackgroundColor="White"
+                HeightRequest="200"
+                Placeholder="Enter ports here, separated by commas"
+                x:Name="InputPorts"
+                TextChanged="InputPortsTextChanged"/>
+            <Label TextColor="Blue"
+                   FontSize="Micro"
+                   Text="Enter ports above, separated,by commas. Use a dash to enter a port range, for example 1-4."
+                   HorizontalTextAlignment="Center"
+                   Margin="0, 5, 0, 5"/>
+
+            <StackLayout
+                Orientation="Horizontal"
+                Margin="15"
+                HorizontalOptions="Center">
+            </StackLayout>
+            <StackLayout Orientation="Horizontal"
+                         HorizontalOptions="Center">
+                <Button
+                    BorderWidth=".8"
+                    BorderColor="Blue"
+                    Text="BACK"
+                    TextColor="Blue"
+                    Clicked="ToMainPageClick"
+                    CornerRadius="7"
+                    BackgroundColor="White"
+                    Padding="5"
+                    WidthRequest="78"
+                    x:Name="ToMainPage"/>
+                <Button
+                    BorderWidth=".8"
+                    BorderColor="Blue"
+                    Text="CLEAR"
+                    TextColor="Blue"
+                    Clicked="Clear"
+                    CornerRadius="7"
+                    BackgroundColor="White"
+                    Padding="5"
+                    WidthRequest="78"/>
+            </StackLayout>
+        </StackLayout>
+    </ScrollView>
+</ContentPage>
